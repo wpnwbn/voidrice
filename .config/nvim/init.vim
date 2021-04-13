@@ -30,6 +30,16 @@ set noruler
 set laststatus=0
 set noshowcmd
 
+" Modified by me:
+set tabstop=4
+set shiftwidth=4
+set expandtab
+" Ctrl-j/k deletes blank line below/above, and Alt-j/k inserts.
+nnoremap <silent><C-j> m`:silent +g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><C-k> m`:silent -g/\m^\s*$/d<CR>``:noh<CR>
+nnoremap <silent><A-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><A-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
+
 " Some basics:
 	nnoremap c "_c
 	set nocompatible
@@ -67,10 +77,10 @@ set noshowcmd
 	nm <leader><leader>q :call ToggleProse()<CR>
 
 " Shortcutting split navigation, saving a keypress:
-	map <C-h> <C-w>h
-	map <C-j> <C-w>j
-	map <C-k> <C-w>k
-	map <C-l> <C-w>l
+	" map <C-h> <C-w>h
+	" map <C-j> <C-w>j
+	" map <C-k> <C-w>k
+	" map <C-l> <C-w>l
 
 " Replace ex mode with gq
 	map Q gq
