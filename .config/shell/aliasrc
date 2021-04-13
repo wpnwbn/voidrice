@@ -42,7 +42,14 @@ alias \
 	xi="sudo xbps-install" \
 	xr="sudo xbps-remove -R" \
 	xq="xbps-query" \
-	z="zathura"
+	z="zathura" \
+	tg="telegram-desktop" \
+	ramus="ramus-modeler" \
+	b="brightnessctl set" \
+    compile="gcc -std=c99 -Wall -Werror -Wpedantic -Wvla -Wextra -Wfloat-conversion -Wfloat-equal -lm main.c -o main" \
+    mm="pactl set-source-mute @DEFAULT_SOURCE@ toggle" \
+	s="spotify" \
+	del="rmtrash -v" \
 
 alias \
 	magit="nvim -c MagitOnly" \
